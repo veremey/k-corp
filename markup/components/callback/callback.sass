@@ -13,11 +13,16 @@
 		border: none
 		margin: 0 0 18px
 		padding: 0
+		&.input--filled
+			label
+				font-size: 10px
+				top: 8px
 	&__label
 		position: absolute
 		left: 20px
 		top: 50%
 		+try(-50%)
+		+tr(.4s)
 	h3
 		font-size: 28px
 		text-transform: uppercase

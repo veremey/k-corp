@@ -3,6 +3,7 @@
 	position: relative
 	background-color: $yellow
 	border-radius: 6px
+	margin-bottom: 30px
 	overflow: hidden
 	&__header
 		display: block
@@ -38,6 +39,19 @@
 		align-items: center
 		justify-content: space-between
 		flex-wrap: wrap
+	&__pic
+		border-radius: 4px
+		overflow: hidden
+	&-video
+		position: relative
+		&:before
+			content: ''
+			+coverdiv
+			background-color: rgba(0, 0, 0, .4)
+		&:after
+			content: ''
+			+vcenter
+			+arr(10, 16, #fff, r)
 	.arrow-list
 		li
 			margin-bottom: 0
@@ -60,4 +74,14 @@
 		position: relative
 		width: 50%
 		padding: 0 40px
+
+
+.eventWide
+	.slick-list
+		margin-left: 10px
+	.slick-track
+		margin-left: -10px
+	&__item
+		font-size: 0
+		margin-left: 10px
 

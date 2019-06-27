@@ -1,0 +1,48 @@
+<!doctype html>
+<html  lang="ru">
+<head>
+	{{> head/head head.defaults}}
+</head>
+
+<body class="page">
+	<div class="page__wrapper">
+		{{> header/header}}
+
+		<div class="section blog">
+			<div class="layout  layout-x ">
+				<div class="layout layout-s">
+					<h2 class="title__section" role="heading" aria-level="2"><mark>Контакты</mark></h2>
+					<div class="text-center" style="margin-bottom: 40px">
+						<p class="desc__bl">У тебя есть вопрос или нужна помощь в построении бизнеса с Китаем?<br>Обращайся, моя команда обязательно тебе поможет!</p>
+					</div>
+					<div class="section__wrap ">
+
+						<div class="map">
+							<div class="map__contact">
+								<form action="/" method="post" class="map__form js-validate">
+									<h3 role="heading" aria-level="3">Напиши нам</h3>
+									<fieldset class="callback__field">
+										<input type="text" name="firstname" id="firstname" class=" callback__inp firstname" aria-label="firstname">
+										<label class="callback__label" for="firstname">Имя <sup>*</sup></label>
+									</fieldset>
+									<fieldset class="callback__field">
+										<input type="email" name="email" id="email" class="callback__inp email" aria-label="email" value="d.kovpak@gmail.com">
+									</fieldset>
+									<textarea name="subject" id="subject" placeholder="Сообщение"></textarea>
+									<button class="btn btn-red"  aria-label='send'> Отправить </button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		{{> footer/footer}}
+	</div>
+
+	<script src="./static/js/main%=hash=%%=min=%.js"></script>
+</body>
+
+</html>
