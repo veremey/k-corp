@@ -1,0 +1,114 @@
+
+.footer
+	padding: 24px 0
+	background-color: #ededed
+	+r(600)
+		padding-bottom: 0
+	p
+		font-size: 16px
+		color: $black
+		margin-bottom: 1em
+		+mr
+	&__wrap
+		flex: 0 1 auto
+		+r(900)
+			margin-bottom: 20px
+		&_wide
+			flex: 1 1 100%
+			+r(450)
+				flex-wrap: wrap
+
+	&__list
+		padding: 0
+		font-size: 0
+		list-style: none
+		li
+			display: inline-block
+			vertical-align: top
+			margin-left: 80px
+			margin-bottom: 10px
+			+r(600)
+				margin-left: 0
+				display: block
+				margin-bottom: 16px
+		a
+			font-size: 14px
+			color: #9a9a9a
+			+mm
+			&:hover
+				text-decoration: none
+	.layout-s
+		display: flex
+		width: 100%
+		+r(900)
+			display: block
+	.logo
+		white-space: nowrap
+		margin-bottom: 10px
+		svg
+			fill: $dark
+	.copy
+		margin-bottom: 0
+		font-size: 12px
+		color: #838383
+		margin-bottom: 0
+		+ml
+
+
+.listik
+	padding: 0 0 0 10%
+	margin: 0
+	list-style: none
+	+r(900)
+		padding-left: 0
+	+r(450)
+		width: 100%
+	li
+		margin-bottom: 10px
+	a
+		color: $black
+		+mm
+		+tr(.4s)
+		&:hover
+			color: #9a9a9a
+
+.ppp
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	align-items: center
+	justify-content: center
+	display: none
+	z-index: -100
+	&.is-active
+		display: flex
+		z-index: 1000
+	&__shadow
+		+coverdiv
+		background-color: rgba(0, 0, 0, .9)
+	&__content
+		position: relative
+		width: 100%
+		max-width: 584px
+		max-height: 80vh
+		background-color: #fff
+		padding: 30px 20px 20px
+		text-align: center
+		border-radius: 10px
+		overflow: hidden
+		display: none
+		&.is-active
+			display: block
+	mark
+		background-color: $n
+		color: $red
+	.btn
+		margin: 0 auto
+		width: 100%
+	.check
+		position: relative
+		span
+			color: $black
+

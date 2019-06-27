@@ -1,0 +1,63 @@
+
+.eventWide
+	position: relative
+	background-color: $yellow
+	border-radius: 6px
+	overflow: hidden
+	&__header
+		display: block
+		overflow: hidden
+		span
+			display: inline-block
+			vertical-align: top
+			font-size: 16px
+			border-radius: 6px
+			padding: 15px 10px 10px 15px
+			color: $yellow
+			background-color: #0c0c0c
+			+ml
+		b
+			+msb
+	&__content
+		padding: 20px
+		h3
+			font-size: 24px
+			margin-bottom: 14px
+			color: $black
+			+mb
+		h4
+			font-size: 14px
+			text-transform: uppercase
+			+mb
+	&__box
+		margin-bottom: 26px
+		p
+			+ml
+	&__footer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+	.arrow-list
+		li
+			margin-bottom: 0
+	.btn
+		padding: 20px 30px
+		max-width: 230px
+	.arrow
+		position: absolute
+		top: 50%
+		+try(-50%)
+		&-left
+			left: -40px
+		&-right
+			right: -40px
+		svg
+			fill: $red
+			height: 28px
+
+	.carusel
+		position: relative
+		width: 50%
+		padding: 0 40px
+

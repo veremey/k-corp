@@ -1,0 +1,116 @@
+
+.hero
+	background: #0d0d0d url('../img/content/black-bg5.jpg')
+
+	&__content
+		display: flex
+		flex-direction: column
+		+r(900)
+			position: relative
+			z-index: 30
+	&__text
+		p
+			margin-bottom: 65px
+	&__gallery
+		position: absolute
+		bottom: 0
+		right: 0
+		display: flex
+		align-items: flex-end
+	&__pic
+		font-size: 0
+		+try(0px)
+		overflow: hidden
+	&__img
+		+r(650)
+			transform: translate(30%, 30%)
+		+r(480)
+			transform: translate(30%, 40%)
+	&__footer
+		position: absolute
+		top: 100%
+		left: 50%
+		transform: translate(-50%, -60%)
+		background-color: #171717
+		color: #fff
+		padding: 16px 60px
+		border-radius: 10px
+		text-align: center
+		z-index: 20
+		+r(650)
+			width: 80vw
+			padding: 16px 24px
+		+r(480)
+			transform: translate(-50%, -10%)
+		h2
+			text-transform: uppercase
+			font-size: 24px
+			margin-bottom: 10px
+			color: #fff
+			+meb
+		p
+			position: relative
+			padding-bottom: 15px
+			margin-bottom: 20px
+			&:after
+				content: ''
+				position: absolute
+				top: 100%
+				left: 50%
+				+trx(-50%)
+				height: 2px
+				width: 40px
+				background-color: #fff
+		a
+			color: #b5514a
+			text-decoration: underline
+			+tr(.4s)
+			&:hover
+				text-decoration: none
+	.btn-red
+		padding: 18px 30px
+	.layout-x
+		height: 100vh
+		display: flex
+		height: 100vh
+		min-height: 820px
+		padding-top: 200px
+		padding-bottom: 20px
+		+r(1024)
+			padding-top: 140px
+		// min-height: 600px
+	.desc__line
+		color: #fff
+		+r(1220)
+			max-width: 550px
+		+r(650)
+			font-size: 16px
+
+
+.squere-big
+	position: absolute
+	bottom: 20px
+	right: 30px
+	width: 100%
+	max-width: 600px
+	height: 300px
+	border: 8px solid $yellow
+	box-shadow: 0 0 40px rgba(255, 189, 0, .4), inset 0 0 40px rgba(255, 189, 0, .4)
+	+r(650)
+		height: 150px
+
+.squere-l
+	position: absolute
+	bottom: 40px
+	left: 0px
+	z-index: 20
+	+r(650)
+		display: none
+		visibility: hidden
+.squere-r
+	position: absolute
+	bottom: 360px
+	right: 0px
+	+r(650)
+		display: none
+		visibility: hidden

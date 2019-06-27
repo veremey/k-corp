@@ -1,0 +1,17 @@
+@import '../normalize.scss';
+// @import '../vars.sass';
+
+/* Libraries, which is used in current project. */
+@import 'built-in-partials/_service.scss';
+
+
+/* Components, which is used in current project. */
+@import '../first.sass';
+@import 'components/header/header.sass';
+@import 'components/hero/hero.sass';
+// @import 'components/socio/socio.sass';
+@import 'components/footer/footer.sass';
+
+
+/* Additional style files. */
+@import '../etc/etc.scss';

@@ -1,0 +1,200 @@
+
+.article
+	display: flex
+	justify-content: space-between
+	width: 100%
+	margin-top: 60px
+	+r(850)
+		flex-wrap: wrap
+		margin-top: 50px
+	&__header
+		position: relative
+		margin-bottom: 10px
+		padding-bottom: 10px
+		&:after
+			content: ''
+			position: absolute
+			top: 100%
+			left: 0
+			width: 50px
+			height: 4px
+			background-color: $yellow
+	&__read
+		display: block
+		margin-bottom: 4px
+	&__date
+		display: inline-block
+		vertical-align: top
+		margin-right: 10px
+		font-size: 16px
+		color: #a3a3a3
+		+msb
+	&__time
+		display: inline-block
+		vertical-align: top
+		font-size: 16px
+		color: $yellow
+		+msb
+	&__content
+		width: 48%
+		+r(850)
+			width: 100%
+			margin-bottom: 60px
+	&__tag
+		display: flex
+		width: 100%
+		flex-wrap: wrap
+		a
+			display: inline-block
+			vertical-align: top
+			color: #a3a3a3
+			margin-right: 4px
+			&:hover
+				text-decoration: underline
+	&__text
+		position: relative
+		height: auto
+		margin-bottom: 10px
+		&_wrap
+			max-height: 114px
+			overflow: hidden
+		p
+			margin-bottom: 1.7em
+		b
+			+mb
+		q
+			font-style: italic
+		&_footer
+			padding: 10px 0
+		&.mod-ttl-little
+			.title__red
+				font-size: 16px
+	&__bottom
+		margin: 100px 0 20px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		a
+			color: $red
+			text-decoration: underline
+			+mm
+			&:hover
+				text-decoration: none
+	&__footer
+		margin-top: auto
+		background: $yellow
+		.list-arrow
+			padding: 15px 30px 5px
+			margin: 0
+			list-style: none
+			li
+				margin: 0 0 10px
+				font-size: 20px
+				+meb
+				&:before
+					top: .8em
+	&__feedback
+		p
+			color: #0c0c0c
+		&__footer
+			display: flex
+			justify-content: space-between
+		.rating
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin: 0
+			background-color: #f5f5f5
+			padding: 0 4px
+			&__info
+				color: #bcbcbc
+		.golosarii
+			color: #bdbdbd
+
+	//mod
+	&_left
+		flex-direction: row-reverse
+		.look__header
+			right: auto
+			left: 0
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				left: 100%
+				right: auto
+				+arr(30, 90, #000, bl)
+	&_blog
+		.article__date
+			font-size: 14px
+			+mr
+		.article__time
+			font-size: 14px
+			+ml
+		.look__header
+			display: none
+
+.share
+	margin-bottom: 20px
+	.button
+		display: inline-block
+		vertical-align: top
+		width: 50px
+		height: 20px
+		padding: 3px
+		border-radius: 10px
+		+tr(.4s)
+		&:hover
+			opacity: .8
+		svg
+			height: 14px
+	[data-sharer="facebook"]
+		background-color: #3b5897
+	[data-sharer="twitter"]
+		background-color: #50abf1
+	[data-sharer="linkedin"]
+		background-color: #0077b7
+
+.comment
+	display: flex
+	align-items: center
+	&__link
+		color: $dark
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.look
+	display: block
+	position: relative
+	width: 48%
+	+r(850)
+		width: 100%
+	&__header
+		position: absolute
+		bottom: 100%
+		right: 0
+		padding: 0 16px 0 4px
+		text-transform: uppercase
+		background-color: #000
+		color: #fff
+		font-size: 24px
+		+meb
+		+r(850)
+			right: auto
+			left: 0
+		&:after
+			content: ''
+			position: absolute
+			top: 0
+			right: 100%
+			+arr(30, 90, #000, br)
+			+r(850)
+				left: 100%
+				right: auto
+				+arr(30, 90, #000, bl)
+	&__pic
+		position: relative
+		overflow: hidden
+
+

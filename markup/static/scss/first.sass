@@ -1,0 +1,429 @@
+
+*
+	box-sizing: border-box
+	outline: none
+	&:after,
+	&:before
+		box-sizing: inherit
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #000
+
+html, body
+	height: 100%
+	background-color: #fff
+body
+	color: $black
+	background-color: #fff
+	font-size: 14px
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	-webkit-text-size-adjust: none
+	-ms-text-size-adjust: none
+	text-size-adjust: none
+	+mr
+a
+	text-decoration: none
+	outline: none
+
+img
+	max-width: 100%
+q
+	&:before,
+	&:after
+		content: none
+
+button
+	background-color: $n
+	border: none
+	outline: none
+	padding: 0
+	cursor: pointer
+	&:hover
+		cursor: pointer
+
+h1, h2, h3, h4, h5, h6
+	margin: 0 0 .8em
+	font-weight: normal
+	line-height: 1.1
+h1
+	font-size: 2em
+h2
+	font-size: 1.8em
+h3
+	font-size: 1.6em
+h4
+	font-size: 1.5em
+h5
+	font-size: 1.4em
+h6
+	font-size: 1.3em
+
+b, strong
+	font-weight: normal
+p
+	margin: 0
+mark
+	background-color: $n
+	color: $yellow
+
+.page
+	&__wrapper
+		position: relative
+		// padding-top: 1px
+		min-height: 100vh
+	&__buffer
+		height: 99px// footer height - 1px
+		+r(650)
+			height: 106px
+		+r(460)
+			height: 165px
+		+r(340)
+			height: 219px
+	&__list
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		list-style: none
+		margin: 50px 0
+		padding: 0
+		li
+			width: 30px
+			height: 30px
+			background-color: #e8e8e8
+			text-align: center
+			line-height: 30px
+			margin: 2px
+			border-radius: 4px
+			color: $black
+			cursor: pointer
+			font-size: 14px
+			+mm
+			+tr(.4s)
+			&:hover
+				background-color: $dark
+				color: #fff
+		.is-active
+			background-color: $red
+			color: #fff
+			&:hover
+				background-color: $red
+				// cursor: default
+
+
+	&.ppp-opened,
+	&.menu-open
+		padding-left: 16px
+		overflow: hidden
+
+.layout
+	position: relative
+	width: 100%
+	margin: 0 auto
+	&-x
+		max-width: 1660px
+		padding: 0 15px
+	&-s
+		max-width: 1140px
+
+.section
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&-ttl
+		position: relative
+		padding: 170px 0 90px
+		margin-bottom: 60px
+		&__bg
+			+coverdiv
+			overflow: hidden
+		&__img
+			+vcenter
+			width: 100%
+		.title__section
+			position: relative
+			font-size: 28px
+			&:after
+				content: ''
+				position: absolute
+				top: 110%
+				left: 50%
+				width: 80%
+				max-width: 280px
+				height: 6px
+				background-color: $yellow
+				+trx(-50%)
+
+.title
+	&__main
+		text-transform: uppercase
+		color: #fff
+		font-size: 60px
+		line-height: 1.2em
+		margin-bottom: 10px
+		+mbl
+		+r(1224)
+			font-size: 40px
+		+r(650)
+			font-size: 34px
+		mark
+			padding: 0 8px
+	&__section
+		font-size: 36px
+		text-align: center
+		text-transform: uppercase
+		line-height: 1.3
+		color: #0c0c0c
+		+mbl
+		mark
+			display: inline-block
+			color: #0c0c0c
+			background-color: $yellow
+			line-height: 1.1
+			padding: 0 8px 4px
+	&__article
+		display: block
+		position: relative
+		text-transform: uppercase
+		color: $dark
+		font-size: 30px
+		margin-bottom: 5px
+		line-height: 1.2
+		+mbl
+	&__red
+		margin-bottom: .5em
+		font-size: 24px
+		color: $red
+		+meb
+	&__line
+		position: relative
+		font-size: 24px
+		padding-left: 16px
+		+mbl
+		&:before
+			content: ''
+			position: absolute
+			top: .2em
+			bottom: .2em
+			left: 0
+			width: 8px
+			background-color: $yellow
+	&__ev
+		font-size: 24px
+		color: $black
+		+mbl
+	&__yellow
+		display: block
+		text-align: center
+		background-color: $yellow
+		text-transform: uppercase
+		padding: 10px
+		margin: 0
+		font-size: 20px
+		+meb
+	&__p
+		font-size: 20px
+		margin-bottom: 1em
+		+mb
+	&__aside
+		text-transform: uppercase
+		font-size: 18px
+		color: $black
+		+meb
+
+.desc
+	&__sub
+		font-size: 24px
+		line-height: 1.1
+		+mm
+	&__line
+		position: relative
+		font-size: 20px
+		padding-left: 10px
+		+mm
+		&:before
+			content: ''
+			position: absolute
+			top: .2em
+			bottom: .2em
+			left: 0
+			width: 4px
+			background-color: $yellow
+	&__b
+		font-size: 18px
+		b
+			+meb
+	&__sb
+		font-size: 16px
+		color: $black
+		+msb
+	&__ib
+		font-size: 16px
+		color: $black
+		+mm
+	&__ac
+		font-size: 14px
+		color: #353535
+
+.btn
+	display: inline-block
+	vertical-align: top
+	width: 100%
+	max-width: 270px
+	padding: 12px 20px
+	background-color: $yellow
+	color: $black
+	border-radius: 4px
+	box-shadow: 0px 10px 15px 0px rgba(255, 189, 0, 0.25)
+	text-transform: uppercase
+	font-size: 14px
+	+tr(.4s)
+	&:hover
+		color: #fff
+		box-shadow: inset 0 0 4px rgba(255, 255, 255, .2), inset 0 0 4px rgba(0, 0, 0, .2), 0px 10px 15px 0px rgba(255, 189, 0, 0.25)
+	&-red
+		background-color: $red
+		padding: 16px 30px
+		box-shadow: 0px 10px 15px 0px rgba(148, 37, 29, 0.25)
+		color: #fff
+		border-radius: 30px
+		+mb
+		&:hover
+			color: $dark
+			box-shadow: none
+	&-see
+		position: relative
+		display: inline-block
+		vertical-align: top
+		line-height: 32px
+		padding: 4px
+		margin-top: auto
+		text-transform: none
+		background-color: $n
+		box-shadow: none
+		border-radius: 20px
+		color: #fff
+		font-size: 16px
+		+ml
+		+r(1200)
+			margin-top: 60px
+		+r(480)
+			background-color: rgba(51, 51, 51, .7)
+		&:hover
+			box-shadow: none
+			cursor: pointer
+			background-color: #333
+		span
+			display: inline-block
+			vertical-align: top
+			position: relative
+			width: 32px
+			height: 32px
+			border: 1px solid #fff
+			border-radius: 100%
+			margin-right: 14px
+			&:after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-25%, -50%)
+				+arr(12, 11, $red, r)
+
+	&-close
+		width: 20px
+		height: 20px
+		display: inline-block
+		position: absolute
+		top: 14px
+		right: 14px
+		&:before
+			content: ''
+			position: absolute
+			top: 3px
+			left: 4px
+			width: 18px
+			height: 2px
+			background-color: #e9e9e9
+			+rotate(45)
+			transform-origin: 0 0
+		&:after
+			content: ''
+			position: absolute
+			top: 16px
+			left: 2px
+			width: 18px
+			height: 2px
+			background-color: #e9e9e9
+			+rotate(-45)
+			transform-origin: 0 0
+		&:hover
+			background-color: #ccc
+	&-t
+		display: inline-block
+		vertical-align: top
+		padding: 14px 20px
+		border: 1px solid $red
+		text-transform: uppercase
+		border-radius: 30px
+		font-size: 14px
+		color: $red
+		+meb
+		+tr(.4s)
+		+r(650)
+			min-width: 270px
+			text-align: center
+		&:hover
+			background-color: $red
+			color: #fff
+		&:disabled
+			opacity: .6
+			+gray
+	&-clr
+		border-color: #dedede
+		color: #dedede
+
+.more
+	display: inline-block
+	vertical-align: top
+	color: $red
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+.icon
+	&-lupa
+		display: inline-block
+		position: absolute
+		top: 50%
+		left: 14px
+		+bg($icon-lupa)
+		+try(-50%)
+	&-sort
+		display: inline-block
+		+bg($icon-sort)
+	&-f
+		display: inline-block
+		+bg($icon-sort)
+	&-tw
+		display: inline-block
+		+bg($icon-sort)
+	&-li
+		display: inline-block
+		+bg($icon-sort)
+	&-back
+		display: inline-block
+		vertical-align: top
+		margin-right: 5px
+		+scale(-1)
+
+.justifyed
+	display: flex
+	justify-content: space-between
+
+.text-center
+	text-align: center

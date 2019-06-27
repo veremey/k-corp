@@ -1,0 +1,70 @@
+
+.callback
+	width: 100%
+	max-width: 470px
+	margin: 0 auto
+	background-color: #ededed
+	padding: 28px 60px 20px
+	text-align: center
+	&__header
+		margin-bottom: 20px
+	&__field
+		position: relative
+		border: none
+		margin: 0 0 18px
+		padding: 0
+	&__label
+		position: absolute
+		left: 20px
+		top: 50%
+		+try(-50%)
+	h3
+		font-size: 28px
+		text-transform: uppercase
+		+meb
+		margin-bottom: 10px
+	p
+		font-size: 14px
+		color: $black
+		+mr
+	input,
+	textarea
+		width: 100%
+		border: none
+		margin: 0
+		padding: 14px 20px
+		border: 1px solid #d0d0d0
+		text-align: left
+		border-radius: 24px
+		color: $black
+		font-size: 14px
+		+mr
+		&.has-error
+			border-color: $red
+	label
+		&.has-error
+			display: none!important
+
+	textarea
+		height: 120px
+		resize: none
+		margin-bottom: 20px
+
+	.btn
+		width: 100%
+		max-width: 100%
+		margin-bottom: 14px
+	.desc__required
+		font-size: 14px
+		+ml
+
+.iti
+	width: 100%
+.iti__selected-flag
+	border-radius: 24px 0 0 24px
+.iti__country-list
+	width: 270px
+.iti input,
+.iti input[type=tel],
+.iti input[type=text]
+	padding-left: 90px!important

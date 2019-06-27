@@ -1,0 +1,614 @@
+
+
+.breadcrumbs
+	padding: 0
+	margin: 0
+	list-style: none
+	text-align: center
+	li
+		display: inline-block
+		vertical-align: top
+		position: relative
+		font-size: 14px
+		color: $dark
+		+mm
+	a
+		position: relative
+		display: block
+		padding-right: 20px
+		color: $red
+		+msb
+		+tr(.4s)
+		&:after
+			content: ''
+			position: absolute
+			top: .8em
+			right: 5px
+			+try(-50%)
+			+arr(6, 8, $red, r)
+		&:hover
+			color: $yellow
+
+.main
+	width: 69%
+	+r(900)
+		width: 100%
+.aside
+	width: 29%
+	padding-top: 120px
+	+r(900)
+		width: 100%
+		padding-top: 0px
+		margin-top: 20px
+	&__pic
+		margin-bottom: 20px
+	&__img
+		max-width: 100%
+		width: 100%
+	.events
+		&__list
+			border-bottom: none
+			li
+				flex-wrap: wrap
+				border: 1px solid #ececec
+				margin-bottom: 20px
+				padding: 10px 20px
+		&__col
+			width: 100%
+			margin: 0 0 10px
+		&__date
+			h3
+				font-size: 16px
+			p
+				font-size: 14px
+		&__text
+			p
+				font-size: 16px
+		&__details
+			a
+				padding: 12px 20px
+
+.subscribe
+	position: relative
+	display: block
+	overflow: hidden
+	background-color: #f8f8f8
+	margin-bottom: 30px
+	z-index: 1
+	&__list
+		padding: 0
+		margin: 10px 0 0
+		list-style: none
+		li
+			display: inline-block
+			vertical-align: top
+			// width: 26px
+			// height: 26px
+			margin: 10px 5px
+		a
+			display: block
+			+tr(.4s)
+			&:hover
+				opacity: .6
+		svg
+			height: 26px
+	p
+		display: block
+		position: relative
+		padding: 10px
+		font-size: 16px
+		color: #fff
+		+meb
+		+r(900)
+			text-align: center
+		&:before
+			content: ''
+			position: absolute
+			left: 76%
+			bottom: -14px
+			width: 600px
+			height: 500px
+			border-radius: 100%
+			background-color: $red
+			transform: translate(-76%, 0%)
+			z-index: -1
+			+r(900)
+				height: 300px
+				width: 110%
+				border-radius: 100px
+	.btn-t
+		margin-top: 30px
+
+.sort
+	position: relative
+	display: flex
+	justify-content: space-between
+	padding: 10px 0
+	z-index: 2
+	+r(900)
+		flex-wrap: wrap
+	&-by
+		position: relative
+		margin-right: 30px
+		i
+			margin-right: 8px
+		p
+			font-size: 14px
+			line-height: 1
+			+mm
+		&__header
+			display: flex
+			align-items: center
+			cursor: pointer
+		&__hidden
+			position: absolute
+			top: 100%
+			left: 0
+			min-width: 100%
+			padding: 5px
+			background-color: #fff
+			box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+			ul
+				display: block
+				width: 100%
+				padding: 0
+				margin: 0
+				list-style: none
+			li
+				display: block
+				text-align: center
+				margin-bottom: 2px
+			input
+				position: absolute
+				visibility: hidden
+				&:checked
+					+ label
+						color: $yellow
+						svg
+							fill: $yellow
+			label
+				text-transform: uppercase
+				font-size: 14px
+		[for="dateDown"]
+			svg
+				display: inline-block
+				vertical-align: baseline
+				height: 12px
+				fill: $dark
+				+rotate(90)
+		[for="dateUp"]
+			svg
+				display: inline-block
+				vertical-align: baseline
+				height: 12px
+				fill: $dark
+				+rotate(-90)
+	&__btns
+		display: flex
+		align-items: center
+		justify-content: space-between
+		+r(900)
+			width: 100%
+			flex-wrap: wrap
+		+r(600)
+			justify-content: center
+	.btn-t
+		margin-left: 20px
+		+r(900)
+			width: 45%
+			margin: 20px 0 0
+		+r(600)
+			margin: 10px
+
+	.filter
+		max-width: 330px
+		height: 46px
+		+r(600)
+			width: 100%
+			max-width: 100%
+			margin-top: 20px
+		&__text
+			height: 46px
+			line-height: 46px
+
+.filter
+	position: relative
+	display: inline-block
+	cursor: pointer
+	font-size: 0
+	white-space: nowrap
+	z-index: 10
+	width: 100%
+	border-radius: 40px
+	padding: 0
+	height: 40px
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		right: 18px
+		transform: translateY(-50%)
+		transform-origin: 50% 50% // 50% 20%
+		+arr(10, 5, $black, b)
+		// +tr(.4s 0s)
+		z-index: 1
+	&:hover
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2)
+
+	&.is-active
+		z-index: 1000
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2)
+		&:after
+			top: 45%
+			right: 10px
+			+rotate(180)
+		.filter__text
+			border-color: transparent
+			border-radius: 20px 20px 0 0
+	&__text
+		position: relative
+		height: 40px
+		font-size: 16px
+		color: $black
+		padding: 0 30px 0 20px
+		vertical-align: middle
+		line-height: 40px
+		user-select: none
+		border: 1px solid #c8c8c8
+		background-color: #fff
+		border-radius: 20px
+		z-index: 1
+		+mr
+		span
+			font-size: 16px
+			color: $black
+			+mr
+
+	&__list
+		position: absolute
+		display: none
+		left: 0px
+		right: 0px
+		top: 20px
+		padding: 20px 0 0
+		list-style: none
+		border-radius: 0 0 20px 20px
+		background: #fff
+		overflow: hidden
+		box-shadow: 0 0 30px rgba(0, 0, 0, .1)
+		&:before
+			content: ''
+			+coverdiv
+			z-index: -5
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2)
+
+	&__link
+		position: relative
+		width: 100%
+		font-size: 14px
+		line-height: 36px
+		padding-left: 10px
+		color: #000
+		cursor: pointer
+		border-top: 1px solid $black
+
+		transition: background-color .8s, border .8s, color .4s
+		&:hover
+			background-color: $red
+			border-top: 1px solid $red
+			color: #fff
+
+	&__row
+		position: relative
+		width: 100%
+		font-size: 14px
+		line-height: 36px
+		padding-left: 20px
+		color: #000
+		cursor: pointer
+		+tr(.4s)
+		&:hover
+			background-color: rgba(204, 204, 204, .5)
+		.btn
+			margin-top: 20px
+	&__all
+		display: inline-block
+		color: $red
+		line-height: .8
+		border-bottom: 1px solid $red
+		&:hover
+			border-color: $n
+
+/* Rating */
+
+.rating
+	display: inline-block
+	vertical-align: top
+	margin: 0 0 5px 20px
+	padding: 0
+	border: none
+	&__caption
+		margin-bottom: 0.5em
+		padding: 0
+	&__group
+		position: relative
+		width: 5em
+		height: 1em
+		background-image: url('../img/content/star-gray.svg')
+		background-size: 1em 1em
+		background-repeat: repeat-x
+	&__input
+		position: absolute
+		width: 1px
+		height: 1px
+		overflow: hidden
+		clip: rect(0 0 0 0)
+	// &__input:focus ~ .rating__focus
+	// 	position: absolute
+	// 	top: -0.1em
+	// 	right: -0.1em
+	// 	bottom: -0.1em
+	// 	left: -0.1em
+	// 	z-index: -1
+	// 	outline: 0.1em solid #4a90e2
+	&__star
+		position: absolute
+		top: 0
+		left: 0
+		margin: 0
+		height: 1em
+		background-size: 1em 1em
+		background-repeat: repeat-x
+		cursor: pointer
+		&:nth-of-type(1)
+			z-index: 5
+			width: 1em
+		&:nth-of-type(2)
+			z-index: 4
+			width: 2em
+		&:nth-of-type(3)
+			z-index: 3
+			width: 3em
+		&:nth-of-type(4)
+			z-index: 2
+			width: 4em
+		&:nth-of-type(5)
+			z-index: 1
+			width: 5em
+	&__info
+		display: inline-block
+		vertical-align: top
+		margin-left: 10px
+		color: #bcbcbc
+.rating__input:hover,
+.rating__input:checked + .rating__star
+			background-image: url('../img/content/star.svg')
+.rating__input:hover ~ .rating__star
+			background-image: url('../img/content/star-gray.svg')
+
+.check
+	position: relative
+	display: inline-block
+	input
+		position: absolute
+		top: 2px
+		left: 0
+		z-index: 2
+		opacity: 0
+		&:checked
+			~ span
+				user-select: none
+				&:before
+					background-color: #fff
+				&:after
+					content: ""
+					position: absolute
+					top: 4px
+					left: 4px
+					display: inline-block
+					vertical-align: top
+					width: 10px
+					height: 8px
+					background-image: url('../img/content/icon-selector-checked.png')
+					// @include bg(icon-selector-checked)
+					// +s(icon-selector-checked)
+		&:disabled
+			~ span
+				opacity: 1
+	span
+		position: relative
+		padding-left: 28px
+		left: 0
+		top: 0
+		font-size: 14px
+		color: #fff
+		cursor: pointer
+		user-select: none
+		+mr
+		z-index: 15
+		+r(380)
+			display: inline-block
+			max-width: 88vw
+		&:before
+			content: ""
+			position: absolute
+			top: -1px
+			left: 0
+			width: 18px
+			height: 18px
+			background-color: #fff
+			border-radius: 100%
+			border: 1px solid $yellow
+			cursor: pointer
+			+tr(.4s)
+
+.blog
+	padding: 160px 0 60px
+	&__header
+		text-align: center
+		margin-bottom: 60px
+		p
+			font-size: 16px
+			+msb
+	&__pic
+		text-align: center
+		font-size: 0
+		margin: 30px 0
+		img
+			display: inline-block
+			vertical-align: top
+			max-width: 100%
+
+.prolog
+	display: flex
+	width: 100%
+	justify-content: space-between
+	flex-wrap: wrap
+	margin-bottom: 40px
+	&__pic
+		width: 39%
+		font-size: 0
+	&__content
+		display: flex
+		flex-direction: column
+		width: 59%
+
+.list
+	&-num
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			padding: 0
+			margin: 0
+		b
+			+mb
+	&-arrow
+		padding: 0
+		margin: 0 0 20px
+		list-style: none
+		li
+			position: relative
+			padding-left: 10px
+			margin-bottom: 4px
+			&:before
+				content: '\003E'
+				position: absolute
+				top: .4em
+				left: 0
+				color: $red
+				font-size: 10px
+				+meb
+		&.mod-black
+			li
+				padding: 0
+				text-indent: 14px
+				&:before
+					color: $black
+					left: -14px
+	&-dots
+		padding: 0 0 0 20px
+		margin: 0 0 20px
+		list-style: disc
+	&-underline
+		padding: 0
+		margin: 0 0 40px
+		list-style: none
+		li
+			padding: 5px
+			border-bottom: 1px solid #e5e5e5
+		a
+			color: $red
+			+mm
+			&:hover
+				text-decoration: underline
+	&-decimal
+		padding: 0
+		margin: 0 0 20px
+		list-style: none
+		text-indent: 14px
+		> li
+			position: relative
+			counter-increment: step-counter
+			&:before
+				content: counter(step-counter)'.'
+				position: absolute
+				top: .0em
+				left: -14px
+				margin-right: 5px
+		.list-arrow li,
+		.list-arrow p
+			margin-bottom: 0px
+
+
+
+
+.quotes
+	position: relative
+	display: inline-block
+	vertical-align: top
+	margin: 20px auto
+	&-yellow
+		padding: 44px 60px
+		background-color: $yellow
+		text-align: center
+		&:before
+			content: '\201C'
+			position: absolute
+			top: -.1em
+			left: 10px
+			font-size: 46px
+			line-height: .6
+			+mbl
+		&:after
+			content: '\201D'
+			position: absolute
+			bottom: -.5em
+			right: 10px
+			font-size: 46px
+			line-height: .6
+			+mbl
+	p
+		font-size: 20px
+.ppp
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	align-items: center
+	justify-content: center
+	display: none
+	z-index: -100
+	&.is-active
+		display: flex
+		z-index: 1000
+	&__shadow
+		+coverdiv
+		background-color: rgba(0, 0, 0, .9)
+	&__content
+		position: relative
+		width: 100%
+		max-width: 584px
+		max-height: 80vh
+		background-color: #fff
+		padding: 30px 20px 20px
+		text-align: center
+		border-radius: 10px
+		overflow: hidden
+		display: none
+		&.is-active
+			display: block
+	mark
+		background-color: $n
+		color: $red
+	.btn
+		margin: 0 auto
+	.check
+		position: relative
+		span
+			color: $black
+
+.mod-mb-40
+	margin-bottom: 40px
+

@@ -1,0 +1,30 @@
+<div class="events">
+	{{#if title}}
+	<h2 class="title__section" role="heading" aria-level="2">
+		{{title}}
+	</h2>
+	{{/if}}
+	<div class="events__content">
+		<ul class="events__list">
+			{{#each item}}
+				<li>
+					<div class="events__col events__date">
+						<h3 role="heading" aria-level="3">{{date}}</h3>
+						<p>{{time}}</p>
+					</div>
+					<div class="events__col events__text">
+						<p>{{desc}}</p>
+					</div>
+					<div class="events__col events__details">
+						<a href="#" class="events__more">Подробнее</a>
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+		{{#if all}}
+			<a href="#" class="more">{{all}}</a>
+		{{/if}}
+
+	</div>
+
+</div>

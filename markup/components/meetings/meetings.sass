@@ -1,0 +1,58 @@
+
+.meetings
+	padding: 110px 0 40px
+	&__list
+		width: 100%
+		max-width: 900px
+		display: grid
+		grid-template-columns: 30% 30% 30%
+		grid-template-rows: auto auto auto
+		grid-gap: 30px 5%
+		padding: 0
+		margin: 0 auto
+		list-style: none
+		font-size: 0
+		+r(850)
+			grid-template-columns: 47% 47%
+			grid-template-rows: auto auto
+		+r(550)
+			grid-template-columns: 100%
+			grid-template-rows: auto
+		li
+			display: flex
+			border-radius: 6px 6px 0 0
+			overflow: hidden
+		a
+			display: block
+			width: 100%
+			background-color: #e8e8e8
+			+tr(.4)
+			&:hover
+				opacity: .7
+	&__title
+		display: block
+		text-align: center
+		padding: 25px 30px
+		background-color: $red
+		border-radius: 6px
+		color: #fff
+		font-size: 24px
+		+mm
+	&__content
+		display: block
+		height: 200px
+		background-color: #ccc
+
+
+.book
+	padding: 60px 0
+	&__list
+		display: flex
+		justify-content: center
+		font-size: 0
+		padding: 0
+		margin: 0
+		list-style: none
+		li
+			margin: 26px 26px 40px
+			box-shadow: 0 4px 20px rgba(0, 0, 0, .2)

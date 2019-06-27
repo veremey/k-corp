@@ -1,0 +1,16 @@
+
+@import 'partials/_libraries.scss';
+
+/* Libraries, which is used in current project. */
+@import 'built-in-partials/_service.scss';
+
+/* Plugins, which is used in current project. */
+@import 'partials/_plugins.scss';
+// @import './../../node_modules/intl-tel-input/build/css/intlTelInput.min.css';
+
+/* Components, which is used in current project. */
+@import 'partials/_components.scss';
+@import '../common.sass';
+
+/* Additional style files. */
+@import '../etc/etc.scss';
