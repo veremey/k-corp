@@ -1,2 +1,66 @@
 .feedback
 	padding: 80px 0 50px
+	+r(650)
+		padding-top: 50px
+	&__item
+		display: flex!important
+		justify-content: space-between
+		flex-wrap: wrap
+	&__pic
+		width: 48%
+		+r(800)
+			width: auto
+			max-width: 96%
+			margin: 0 auto
+			text-align: center
+	&__img
+		+r(800)
+			display: inline-block
+	&__content
+		width: 50%
+		+r(800)
+			width: 100%
+			margin-top: 20px
+	&__header
+		margin-bottom: 40px
+		h3
+			font-size: 28px
+			color: $black
+			+meb
+		.subtitle
+			text-transform: uppercase
+		p
+			font-size: 16px
+			font-size: 16px
+			color: #696969
+			+mr
+	&__do
+		h3
+			font-size: 16px
+			text-transform: uppercase
+			color: $black
+			+mb
+	&__result
+		h3
+			font-size: 16px
+			text-transform: uppercase
+			color: $yellow
+			+mb
+	.btn
+		box-shadow: none
+	.carusel
+		margin: 50px 0 0
+		+r(1250)
+			padding: 0 40px
+	.arrow
+		position: absolute
+		top: 50%
+		+try(-50%)
+		&-left
+			left: -40px
+		&-right
+			right: -40px
+			left: auto
+		svg
+			fill: $red
+			height: 28px

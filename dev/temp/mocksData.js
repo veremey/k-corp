@@ -288,9 +288,20 @@
 
 'head': {
     defaults: {
-        title: 'corp',
+        title: 'Сообщество по бизнесу с Китаем №1 в СНГ',
         useSocialMetaTags: true
     }
+},
+
+'meeting': {
+	item: [{
+		soon: 'скоро',
+		reg: 'Регистрация окончена',
+		title: 'Игра 6.0',
+		img: '',
+		h4: 'Личная эффективность бизнесмена',
+		desc: 'Увеличивайте вашу личную  продуктивность. Меньше  работы - больше результата'
+	}]
 },
 
 'readl': {
@@ -322,6 +333,9 @@ __pages: [{
                 name: 'contact',
                 href: 'contact.html'
              },{
+                name: 'education',
+                href: 'education.html'
+             },{
                 name: 'events',
                 href: 'events.html'
              },{
@@ -330,4 +344,7 @@ __pages: [{
              },{
                 name: 'index',
                 href: 'index.html'
+             },{
+                name: 'page-list',
+                href: 'page-list.html'
              }]

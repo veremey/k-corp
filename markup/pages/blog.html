@@ -51,15 +51,15 @@
 								<!--  -->
 								<div class="filter js-filter">
 									<div class="filter__text js-filter-text">
-										<span>Ваша роль в бизнесе</span>
+										<span>Категории</span>
 									</div>
 									<input class="js-filter-input" type="hidden" value="" name="type">
 									<ul class="filter__list js-filter-list">
 										<li class="filter__row" data-id="0">
-											<span>Руководитель</span>
+											<span>Категория 1</span>
 										</li>
 										<li class="filter__row" data-id="1">
-											<span>Менеджер</span>
+											<span>Категория 2</span>
 										</li>
 									</ul>
 								</div>
@@ -87,7 +87,7 @@
 							<div class="subscribe">
 								<p>Подпишись<br>чтобы первым<br>получать новинки</p>
 								<div class="text-center">
-									<button class="btn-t">Подписаться</button>
+									<button class="btn-t js-ppp"  data-ppp="register">Подписаться</button>
 									<ul class="subscribe__list">
 										<li>
 											<a href="" target="_blank" >
@@ -118,8 +118,8 @@
 									</ul>
 								</div>
 							</div>
-							<h3 class="title__aside" role="heading" aria-level="3">События</h3>
-							<div class="aside__pic">
+							<h3 class="title__aside  mod-mb-hidden" role="heading" aria-level="3">События</h3>
+							<div class="aside__pic  mod-mb-hidden">
 								<picture>
 									<source srcset="static/img/content/aside.webp "
 														type="image/webp">
@@ -137,7 +137,14 @@
 		{{> footer/footer}}
 	</div>
 
-	<script src="./static/js/main%=hash=%%=min=%.js"></script>
+	<script src='static/js/separate-js/jquery.js'></script>
+	<script src='static/js/separate-js/slick-carousel.js'></script>
+	<script src='static/js/separate-js/jquery-mask-plugin.js'></script>
+	<script src='static/js/separate-js/jquery-validation.js'></script>
+	<script src='static/js/separate-js/video.js'></script>
+	<script src='static/js/separate-js/classie.js'></script>
+	<script src='static/js/separate-js/main.js'></script>
+	<!-- <script src="./static/js/main%=hash=%%=min=%.js?v=122"></script> -->
 </body>
 
 </html>

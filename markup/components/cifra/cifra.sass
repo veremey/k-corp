@@ -4,6 +4,8 @@
 	background: $red url('../img/content/bg-red.jpg')
 	.title__section
 		color: #fff
+		+r(650)
+			font-size: 30px
 	&__list
 		display: flex
 		justify-content: space-between
@@ -21,9 +23,13 @@
 			color: #fff
 			+r(850)
 				width: 100%
+			+r(650)
+				margin-bottom: 20px
 	.desc__line
 		font-size: 36px
 		+mbl
+		+r(650)
+			font-size: 26px
 	p
 		text-transform: uppercase
 	.footnote

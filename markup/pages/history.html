@@ -98,9 +98,7 @@
 								<p>Маленькое увлечение превратилось в самое большое сообщество по бизнесу с Китаем в 8000+ человек из 19 стран мира.</p>
 
 								<p class="desc__b"><b>Хочешь быть одним из тех, о ком спустя пару лет будет говорить весь мир? </b></p>
-								<button class="btn btn-red">Да, я хочу</button>
-
-
+								<button class="btn btn-red js-ppp"  data-ppp="register">Да, я хочу</button>
 							</div>
 
 						</div>
@@ -110,7 +108,7 @@
 							<div class="subscribe">
 								<p>Подпишись<br>чтобы первым<br>получать новинки</p>
 								<div class="text-center">
-									<button class="btn-t">Подписаться</button>
+									<button class="btn-t js-ppp " data-ppp="register">Подписаться</button>
 									<ul class="subscribe__list">
 										<li>
 											<a href="" target="_blank" >
@@ -141,8 +139,8 @@
 									</ul>
 								</div>
 							</div>
-							<h3 class="title__aside" role="heading" aria-level="3">События</h3>
-							<div class="aside__pic">
+							<h3 class="title__aside mod-mb-hidden" role="heading" aria-level="3">События</h3>
+							<div class="aside__pic  mod-mb-hidden">
 								<picture>
 									<source srcset="static/img/content/aside.webp "
 														type="image/webp">
@@ -159,28 +157,28 @@
 								<li><a href="./blogItem.html">5 простых шагов к выбору прибыльного товара для своего бизнеса</a></li>
 							</ul>
 
-							<div class="aside__pic">
+							<div class="aside__pic  mod-mb-hidden">
 								<picture>
 									<source srcset="static/img/content/blog.webp "
 														type="image/webp">
 									<img src="static/img/content/blog.jpg" alt="pic" class="aside__img">
 								</picture>
 							</div>
-							<div class="aside__pic">
+							<div class="aside__pic  mod-mb-hidden">
 								<picture>
 									<source srcset="static/img/content/blog.webp "
 														type="image/webp">
 									<img src="static/img/content/blog.jpg" alt="pic" class="aside__img">
 								</picture>
 							</div>
-							<div class="aside__pic">
+							<div class="aside__pic  mod-mb-hidden">
 								<picture>
 									<source srcset="static/img/content/blog.webp "
 														type="image/webp">
 									<img src="static/img/content/blog.jpg" alt="pic" class="aside__img">
 								</picture>
 							</div>
-							<div class="aside__pic">
+							<div class="aside__pic  mod-mb-hidden">
 								<picture>
 									<source srcset="static/img/content/blog.webp "
 														type="image/webp">
@@ -204,7 +202,15 @@
 		{{> footer/footer}}
 	</div>
 
-	<script src="static/js/main%=hash=%%=min=%.js"></script>
+	<script src='static/js/separate-js/jquery.js'></script>
+    <script src='static/js/separate-js/slick-carousel.js'></script>
+    <script src='static/js/separate-js/jquery-mask-plugin.js'></script>
+    <script src='static/js/separate-js/jquery-validation.js'></script>
+    <script src='static/js/separate-js/video.js'></script>
+    <script src='static/js/separate-js/classie.js'></script>
+    <script src='static/js/separate-js/main.js'></script>
+
+	<!-- <script src="static/js/main%=hash=%%=min=%.js?v=122"></script> -->
 </body>
 
 </html>

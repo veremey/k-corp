@@ -35,7 +35,7 @@
 		width: 100%
 .aside
 	width: 29%
-	padding-top: 120px
+	// padding-top: 120px
 	+r(900)
 		width: 100%
 		padding-top: 0px
@@ -67,6 +67,11 @@
 		&__details
 			a
 				padding: 12px 20px
+				+r(650)
+					width: 100%
+	.mod-mb-hidden
+		+r(900)
+			display: none
 
 .subscribe
 	position: relative
@@ -123,10 +128,9 @@
 	position: relative
 	display: flex
 	justify-content: space-between
-	padding: 10px 0
+	// padding: 10px 0
 	z-index: 2
-	+r(900)
-		flex-wrap: wrap
+	flex-wrap: wrap
 	&-by
 		position: relative
 		margin-right: 30px
@@ -187,26 +191,30 @@
 		display: flex
 		align-items: center
 		justify-content: space-between
+		width: 100%
+		margin-top: 20px
 		+r(900)
 			width: 100%
 			flex-wrap: wrap
 		+r(600)
 			justify-content: center
+			margin-top: 0
 	.btn-t
-		margin-left: 20px
+		width: 48%
 		+r(900)
-			width: 45%
 			margin: 20px 0 0
 		+r(600)
-			margin: 10px
+			width: 100%
 
 	.filter
-		max-width: 330px
+		flex-grow: 1
+		margin-left: 20px
+		width: auto
 		height: 46px
 		+r(600)
 			width: 100%
 			max-width: 100%
-			margin-top: 20px
+			margin: 20px 0 0
 		&__text
 			height: 46px
 			line-height: 46px
@@ -444,6 +452,8 @@
 
 .blog
 	padding: 160px 0 60px
+	+r(850)
+		padding-top: 100px
 	&__header
 		text-align: center
 		margin-bottom: 60px
@@ -468,10 +478,16 @@
 	&__pic
 		width: 39%
 		font-size: 0
+		+r(650)
+			width: 100%
+			margin-bottom: 20px
+			text-align: center
 	&__content
 		display: flex
 		flex-direction: column
 		width: 59%
+		+r(650)
+			width: 100%
 
 .list
 	&-num
@@ -482,6 +498,7 @@
 			padding: 0
 			margin: 0
 		b
+			font-size: 110%
 			+mb
 	&-arrow
 		padding: 0
@@ -539,22 +556,84 @@
 		.list-arrow li,
 		.list-arrow p
 			margin-bottom: 0px
+	&-line
+		padding: 0
+		margin: 20px 0
+		list-style: none
+		li
+			position: relative
+			padding-left: 20px
+			&:before
+				content: ''
+				position: absolute
+				top: .8em
+				left: 0
+				height: 1px
+				width: 14px
+				background-color: $yellow
+	&-target
+		padding: 0
+		margin: 20px 0
+		list-style: none
+		li
+			position: relative
+			padding-left: 50px
+			height: auto
+			min-height: 40px
+			margin-bottom: 16px
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 36px
+				height: 36px
+				background-image: url('../img/content/target.png')
+
+.contact
+	.layout-s
+		padding: 140px 0 0
+	.layout-x
+		position: relative
+		z-index: 10
+	.f-socio
+		margin-top: 15px
 
 .map
+	width: 100%
 	&__contact
 		position: relative
+		display: flex
+		align-items: flex-start
+		justify-content: flex-end
+		width: 100%
+		z-index: 10
+		+r(850)
+			flex-wrap: wrap
+			justify-content: center
+	&__form
+		position: absolute
+		top: 0
+		left: 0
+		width: 30%
 		background: #fff
 		box-shadow: 0 0 30px rgba(0, 0, 0, .1)
 		border-radius: 6px
 		border-top: 3px solid $yellow
 		padding: 20px
+		font-size: 16px
+		+r(850)
+			position: relative
+			width: 100%
+			max-width: 340px
+			margin-bottom: 40px
 		h3
 			text-transform: uppercase
 			color: $black
 			font-size: 24px
 			+meb
 		fieldset
-			margin-bottom: 10px
+			margin-bottom: 16px
 		label
 			left: 0
 			color: #e8e8e8
@@ -566,11 +645,46 @@
 			padding: 0 0 4px
 			border: none
 			border-bottom: 1px solid #e8e8e8
+			border-radius: 0
 		textarea
 			resize: none
 			height: 120px
 			margin-bottom: 30px
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 60%
+		margin-left: 6
+		+r(650)
+			width: 100%
+			max-width: 340px
+	&__col
+		width: 48%
+		+r(850)
+			width: 100%
+		svg
+			display: inline-block
+			vertical-align: top
+			height: 24px
+			margin-right: 14px
+	&__row
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		margin-bottom: 20px
+	&__link
+		color: $dark
+		display: block
+		font-size: 16px
 
+#map
+	display: block
+	// height: 50vh
+	height: 360px
+	width: 100%
+	background-color: #ebebeb
+	z-index: 1
 
 
 .quotes
@@ -582,6 +696,8 @@
 		padding: 44px 60px
 		background-color: $yellow
 		text-align: center
+		+r(650)
+			padding: 25px 30px
 		&:before
 			content: '\201C'
 			position: absolute
@@ -669,4 +785,7 @@
 
 .mod-mb-40
 	margin-bottom: 40px
+.mod-mb-hidden
+	+r(650)
+		display: none
 

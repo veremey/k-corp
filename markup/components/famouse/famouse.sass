@@ -12,13 +12,15 @@
 			display: flex !important
 			padding-top: 80px
 		.slick-list
-			margin-left: -10px /*hack*/
+			margin-left: -20px /*hack*/
+	.arrow
+		position: relative
 
 .slider
 	color: $dark
-	margin-left: -10px
-	+r(850)
-		margin-left: -5px
+	// margin-left: -20px
+	// +r(850)
+	// 	margin-left: -5px
 	&__item
 		display: flex
 		height: auto
@@ -85,7 +87,9 @@
 
 .carusel
 	.arrow
-		position: relative
+		position: absolute
+		top: calc(100% + 20px)
+		+trx(-50%)
 		display: inline-block
 		vertical-align: top
 		width: 36px
@@ -104,6 +108,14 @@
 		&-left
 			svg
 				transform: translate(-50%, -50%) rotate(180deg)
+		&-left
+			left: calc(50% - 25px)
+		&-right
+			left: calc(50% + 15px)
+		svg
+			fill: #fff
+			height: 20px
+
 	// .slick-slide
 	// 	margin-left: 10px
 	// 	+r(850)

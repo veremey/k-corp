@@ -593,6 +593,15 @@ mark {
   width: 100%;
 }
 
+@media only screen and (max-width: 850px) {
+  .section-ttl__img {
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+    max-width: none;
+  }
+}
+
 .section-ttl .title__section {
   position: relative;
   font-size: 28px;
@@ -647,12 +656,25 @@ mark {
   font-weight: 900;
 }
 
+@media only screen and (max-width: 650px) {
+  .title__section {
+    font-size: 26px;
+  }
+}
+
 .title__section mark {
   display: inline-block;
   color: #0c0c0c;
   background-color: #ffbd00;
   line-height: 1.1;
   padding: 0 8px 4px;
+}
+
+@media only screen and (max-width: 650px) {
+  .title__section + .desc__m {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 .title__article {
@@ -667,6 +689,12 @@ mark {
   font-weight: 900;
 }
 
+@media only screen and (max-width: 650px) {
+  .title__article {
+    font-size: 24px;
+  }
+}
+
 .title__red {
   margin-bottom: .5em;
   font-size: 24px;
@@ -675,12 +703,24 @@ mark {
   font-weight: 800;
 }
 
+@media only screen and (max-width: 650px) {
+  .title__red {
+    font-size: 20px;
+  }
+}
+
 .title__line {
   position: relative;
   font-size: 24px;
   padding-left: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+}
+
+@media only screen and (max-width: 650px) {
+  .title__line {
+    font-size: 20px;
+  }
 }
 
 .title__line:before {
@@ -698,6 +738,12 @@ mark {
   color: #0c0c0c;
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
+}
+
+@media only screen and (max-width: 650px) {
+  .title__ev {
+    font-size: 20px;
+  }
 }
 
 .title__yellow {
@@ -734,12 +780,24 @@ mark {
   font-weight: 500;
 }
 
+@media only screen and (max-width: 650px) {
+  .desc__sub {
+    font-size: 20px;
+  }
+}
+
 .desc__line {
   position: relative;
   font-size: 20px;
   padding-left: 10px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 650px) {
+  .desc__line {
+    font-size: 18px;
+  }
 }
 
 .desc__line:before {
@@ -759,6 +817,12 @@ mark {
 .desc__b b {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
+}
+
+.desc__m {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .desc__sb {
@@ -800,9 +864,18 @@ mark {
   -webkit-box-shadow: 0px 10px 15px 0px rgba(255, 189, 0, 0.25);
           box-shadow: 0px 10px 15px 0px rgba(255, 189, 0, 0.25);
   text-transform: uppercase;
+  text-align: center;
   font-size: 14px;
+  cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+@media only screen and (max-width: 650px) {
+  .btn {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .btn:hover {
@@ -818,14 +891,16 @@ mark {
           box-shadow: 0px 10px 15px 0px rgba(148, 37, 29, 0.25);
   color: #fff;
   border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
 .btn-red:hover {
-  color: #282626;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  color: #ffbd00;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(148, 37, 29, 0.25);
+          box-shadow: 0px 10px 15px 0px rgba(148, 37, 29, 0.25);
 }
 
 .btn-see {
@@ -949,6 +1024,7 @@ mark {
 @media only screen and (max-width: 650px) {
   .btn-t {
     min-width: 270px;
+    width: 100%;
     text-align: center;
   }
 }
@@ -1192,7 +1268,14 @@ mark {
   font-weight: 400;
 }
 
+@media only screen and (max-width: 1200px) {
+  .navi a {
+    font-size: 18px;
+  }
+}
+
 .logo {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   font-size: 0;
@@ -1200,6 +1283,7 @@ mark {
   white-space: nowrap;
   color: #fff;
   letter-spacing: -.07em;
+  z-index: 1;
 }
 
 .logo svg {
@@ -1516,6 +1600,21 @@ mark {
 
 .hero .btn-red {
   padding: 18px 30px;
+}
+
+@media only screen and (max-width: 650px) {
+  .hero .btn-red {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .hero .btn-see {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
 }
 
 .hero .layout-x {

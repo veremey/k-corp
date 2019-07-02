@@ -25,6 +25,31 @@
 					<a href="/blogItem.html" class="more">{{more}}</a>
 				</div>
 			</div>
+			{{#if footerText}}
+				<h4 class="title__yellow" role="heading" aria-level="4">{{{footerText}}}</h4>
+			{{/if}}
+		</div>
+		<div class="article__gallery">
+			{{#if video}}
+				<div class="look">
+					<p class="look__header">СМОТРИ ЭТО</p>
+					<div class="look__video">
+						{{> video/video }}
+					</div>
+				</div>
+			{{/if}}
+			{{#if photo}}
+				<a href="/blogItem.html" class="look">
+					<p class="look__header">Читай ЭТО</p>
+					<div class="look__pic">
+						<picture>
+							<source srcset="static/img/content/{{photo}}.webp "
+												type="image/webp">
+											<img src="static/img/content/{{photo}}.jpg" loading="lazy" alt="pic" class="look__img">
+						</picture>
+					</div>
+				</a>
+			{{/if}}
 			{{#if share}}
 				<div class="share">
 					<button class="button" data-sharer="facebook" data-url="http://dimakovpak.ru" data-title="{{title}}">
@@ -64,29 +89,6 @@
 					</fieldset>
 				</div>
 			{{/if}}
-			{{#if footerText}}
-				<h4 class="title__yellow" role="heading" aria-level="4">{{{footerText}}}</h4>
-			{{/if}}
 		</div>
-		{{#if video}}
-			<div class="look">
-				<p class="look__header">СМОТРИ ЭТО</p>
-				<div class="look__video">
-					{{> video/video }}
-				</div>
-			</div>
-		{{/if}}
-		{{#if photo}}
-			<a href="/blogItem.html" class="look">
-				<p class="look__header">Читай ЭТО</p>
-				<div class="look__pic">
-					<picture>
-						<source srcset="static/img/content/{{photo}}.webp "
-											type="image/webp">
-										<img src="static/img/content/{{photo}}.jpg" loading="lazy" alt="pic" class="look__img">
-					</picture>
-				</div>
-			</a>
-		{{/if}}
 	</article>
 {{/each}}

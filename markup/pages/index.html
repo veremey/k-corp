@@ -10,11 +10,13 @@
         {{> header/header}}
         {{> hero/hero}}
         {{> autor/autor}}
+        {{> osnovatel/osnovatel}}
         {{> worth/worth}}
         {{> m-blog/m-blog}}
         {{> famouse/famouse}}
         {{> popular-v/popular-v}}
-        {{> meetings/meetings}}
+        {{> meeting/meeting}}
+        {{> book/book}}
         {{> cifra/cifra}}
         {{> feedback/feedback}}
 
@@ -23,15 +25,14 @@
         {{> footer/footer}}
     </div>
 
-    <script src="static/js/separate-js/service-worker.js"></script>
-
-    <script>
-        if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('static/js/separate-js/service-worker.js');
-    }
-    </script>
-
-    <script src="static/js/main%=hash=%%=min=%.js"></script>
+    <script src='static/js/separate-js/jquery.js'></script>
+    <script src='static/js/separate-js/slick-carousel.js'></script>
+    <script src='static/js/separate-js/jquery-mask-plugin.js'></script>
+    <script src='static/js/separate-js/jquery-validation.js'></script>
+    <script src='static/js/separate-js/video.js'></script>
+    <script src='static/js/separate-js/classie.js'></script>
+    <script src='static/js/separate-js/main.js'></script>
+    <!-- <script src="static/js/main%=hash=%%=min=%.js?v=122"></script> -->
 </body>
 
 </html>

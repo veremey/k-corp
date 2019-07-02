@@ -1,6 +1,4 @@
 'use strict';
-require('intersection-observer');
-
 import $ from 'jquery';
 
 $(document).ready(function () {
@@ -20,9 +18,6 @@ $(document).ready(function () {
 });
 
 
-
-// import intlTelInput from './../../../node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js';
-// import intlUtils from './../../../node_modules/intl-tel-input/build/js/utils.js';
 import slick from 'slick-carousel';
 import mask from 'jquery-mask-plugin';
 import valid from 'jquery-validation';
@@ -63,13 +58,11 @@ $(document).ready(function () {
 
 	$('.phone').mask('+00000000000000');
 
-	sliderRow();
-
 	$('.slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		prevArrow: $('#slider__left'),
-		nextArrow: $('#slider__right'),
+		prevArrow: $prevArrow,
+		nextArrow: $nextArrow,
 		swipe: false,
 		responsive: [
 				{
@@ -89,7 +82,7 @@ $(document).ready(function () {
 					settings: {
 						slidesToShow: 1,
 						slidesToScroll: 1,
-						adaptiveHeight: true
+						// adaptiveHeight: true
 					}
 				}
 			]
@@ -98,12 +91,8 @@ $(document).ready(function () {
 	$('.readl__slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
-		prevArrow: function () {
-			$(this).parent('.carusel').find('.arrow-left');
-		},
-		nextArrow: function () {
-			$(this).parent('.carusel').find('.arrow-right');
-		},
+		prevArrow: $prevArrow,
+		nextArrow: $nextArrow,
 		responsive: [
 				{
 					breakpoint: 1100,
@@ -157,6 +146,69 @@ $(document).ready(function () {
 					}
 				}
 			]
+	});
+
+	$('.feedback__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: $prevArrow,
+		nextArrow: $nextArrow,
+		responsive: [
+				{
+					breakpoint: 650,
+					settings: {
+
+						adaptiveHeight: true
+					}
+				}
+			]
+	});
+
+	$('.osnovatel__slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: $prevArrow,
+		nextArrow: $nextArrow,
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 650,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
+	});
+
+
+	$('.slider-row').slick({
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		arrows: true,
+		prevArrow: $prevArrow,
+		nextArrow: $nextArrow,
+		swipe: false,
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 650,
+				settings: {
+					slidesToShow: 1,
+				}
+			}
+		]
 	});
 
 
@@ -215,7 +267,6 @@ $(document).ready(function () {
 			$('.sort-by__hidden').slideDown();
 		}
 	});
-
 
 	$(document).on('click touchstart', function(el){
 		var childr = $('.sort-by').find('*');
@@ -296,29 +347,6 @@ $(document).on('click', function(el){
 	}
 });
 
-
-function sliderRow() {
-	var $sliderRow = $('.slider-row');
-	var width = window.innerWidth || document.body.clientWidth;
-
-	if(width > 850) {
-		$sliderRow.slick({
-						slidesPerRow: 2,
-						rows: 2,
-						centerPadding: '10px',
-						prevArrow: $('#slider-row__left'),
-						nextArrow: $('#slider-row__right'),
-		});
-	} else {
-		$sliderRow.slick({
-				slidesPerRow: 1,
-				rows: 1,
-				centerPadding: '10px',
-				prevArrow: $('#slider-row__left'),
-				nextArrow: $('#slider-row__right'),
-		});
-	}
-}
 
 function validate() {
 	$('.js-validate').each(function(){
@@ -475,7 +503,25 @@ function filter() {
 	});
 }
 
+// MAP
+if($('#map').length) {
+	var mymap
+	if(document.width > 1100 ){
+		mymap = L.map('map').setView([50.445974, 30.518605], 16);
+	} else {
+		mymap = L.map('map').setView([50.446185, 30.522274], 16);
+	}
+	// var mymap = L.map('map').setView([50.445974, 30.518605], 16);
+	var marker = L.marker([50.446185, 30.522274]).addTo(mymap);
 
+	L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoidmVyZW1leSIsImEiOiJjanhpZ2hxaXQxNThpM3VvN2cwN2FoaWttIn0.7f5SQdXXxZeFEnVaOAC9_w', {
+	    attribution: ' ',
+	    maxZoom: 18,
+	    id: 'mapbox.streets',
+	    accessToken: 'pk.eyJ1IjoidmVyZW1leSIsImEiOiJjanhpZ2hxaXQxNThpM3VvN2cwN2FoaWttIn0.7f5SQdXXxZeFEnVaOAC9_w'
+	}).addTo(mymap);
+
+}
 
 
 /*!
